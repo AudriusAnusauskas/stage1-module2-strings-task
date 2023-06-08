@@ -9,6 +9,7 @@ public class MethodSignature {
     private String methodName;
     private final List<Argument> arguments;
 
+
     public MethodSignature(String methodName, List<Argument> arguments) {
         this.methodName = methodName;
         this.arguments = arguments;
@@ -44,6 +45,11 @@ public class MethodSignature {
 
     public List<Argument> getArguments() {
         return arguments;
+    }
+
+    public void setArguments(List<Argument> arguments) {
+        this.arguments.clear();
+        this.arguments.addAll(arguments);
     }
 
     public static class Argument {
